@@ -1,4 +1,4 @@
-#whil loop
+#while loop
 # count=0
 # sum=0
 # while count<5:
@@ -42,11 +42,31 @@
 # print("The sum of all even number between  0-20 is :"+str(even_sum))
 
 #display odd number
-i=0
-odd_sum=0
-while i<=19:
-    if(i%2 != 0):
-        odd_sum += i
-        print(odd_sum)
-    i+=1
-print("The sum of all odd number between 0 -20:"+str(odd_sum))
+# i=0
+# odd_sum=0
+# while i<=19:
+#     if(i%2 != 0):
+#         odd_sum += i
+#         print(odd_sum)
+#     i+=1
+# print("The sum of all odd number between 0 -20:"+str(odd_sum))
+
+#break keyword in while loop
+
+# count=0
+
+# while count<15:
+#     if(count==7):
+#         break
+#     print(count)
+#     count=count+1
+
+#continue keyword in while loop
+
+count=0
+while count<10:
+    count=count+1
+    if count==5 :
+        continue
+    print(count)
+  
