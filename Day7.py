@@ -41,12 +41,41 @@
 
 # print("vowel letter:",str(count))
 
-def count_vowels(sentence):
-    count=0
-    vowels=['a','A','e','E','i','I','o','O','u','U']
-    for char in sentence:
-        if char in vowels:
-            count +=1
-    print("Total no. of Vowel letter is :",str(count)) 
-count_vowels("HELLO World, My name is Dipesh")
+# def count_vowels(sentence):
+#     count=0
+#     vowels=['a','A','e','E','i','I','o','O','u','U']
+#     for char in sentence:
+#         if char in vowels:
+#             count +=1
+#     print("Total no. of Vowel letter is :",str(count)) 
+# count_vowels("HELLO World, My name is Dipesh")
 
+#Remove duplicate data
+mylist = ['car', 'bike', 'cycle', 'scooter']
+
+# Adding a new item to the list
+new_item = 'bike'
+if new_item not in mylist:
+    mylist.append(new_item)
+else:
+    print(f"{new_item} is already present in the list.")
+
+# Checking for duplicates
+seen = set()
+unique_list = []
+for item in mylist:
+    if item not in seen:
+        seen.add(item)
+        unique_list.append(item)
+
+print("Original List:", mylist)
+print("List without duplicates:", unique_list)
+
+def remove_duplicate(items):
+    unique=[]
+    for item in items:
+        if item not in unique:
+            unique.append(item)
+    return unique
+numbers=[22,11,3,1,4,5,5,2,2,11,66,89]
+print(remove_duplicate(numbers))
