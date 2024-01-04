@@ -110,3 +110,40 @@
 #         if home_team != away_team:
 #             print(home_team + " Vs " + away_team)
 
+# def greet_friends(friends):
+#     for friend in friends:
+#         print("Hello "+friend)
+# greet_friends(["Ram","hari","sita"])
+
+#factorial
+# def factorial(n):
+#     result=1
+#     for x in range(1,n+1):
+#         result=result * x
+#     return result
+# for n in range(1,10):
+#     print(n,factorial(n))
+
+#write a script that prints the first 10 cube number(x**3),starting with x=1 and ending with x=10
+
+# for x in range(1,10):
+#     print(pow(x,3))
+
+#write a script that prints the multiples of 7 between 0 and 100 . print one multiple per line and avoid
+#printing any numbers that aren't multiples of 7. Remember that 0 is also multiple of 7
+
+# for i in range(0,101,7):
+#     print(i)
+
+#The retry function tries to execute an operation that might fail,it retries the operation for a number of attempts.
+#currently the code will keep executing the function even if it succeeds.
+
+# def retry(operation,attempts):
+#     for n in range(attempts):
+#         if operation():
+#             print("Attempt"+str(n)+"succeeded")
+#             break
+#         else:
+#             print("Attempt"+str(n)+"failed")
+# retry(create_user,3)
+# retry(stop_service,5)
