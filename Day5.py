@@ -28,12 +28,12 @@
 # #continue will skip the rest part of the current iteration
 
 #The range() function can take up to three parameters:range(start,stop,step)
-for n in range(1,5,6):
-    print(n)
+# for n in range(1,5,6):
+#     print(n)
 
 #range(stop)
-for n in range(3):
-    print(n)
+# for n in range(3):
+#     print(n)
 
 # This loop iterates on the value of the "n" variable in a range
 # of 0 to 10 (the value of the end-of-range index 11 is excluded).
@@ -43,8 +43,8 @@ for n in range(3):
 # method that can be used in Python to print a list of even numbers.
 
 
-for n in range(0,11,2):
-    print(n)
+# for n in range(0,11,2):
+#     print(n)
 
 
 # The loop should print 0, 2, 4, 6, 8, 10
@@ -58,8 +58,8 @@ for n in range(0,11,2):
 # multiplied by 3.
 
 
-for number in range(2,7+1):
-    print(number*3)
+# for number in range(2,7+1):
+#     print(number*3)
 
 
 # The loop should print 6, 9, 12, 15, 18, 21
@@ -71,8 +71,8 @@ for number in range(2,7+1):
 # "x" as it starts at 2 and counts down to -1 (index -2).
 
 
-for x in range(2, -2, -1):
-    print(x)
+# for x in range(2, -2, -1):
+#     print(x)
 
 
 # The loop should print 2, 1, 0, -1
@@ -96,3 +96,17 @@ for x in range(2, -2, -1):
 # Step - Incremental value 
 
 # default = 1
+    
+#nested for loop
+
+# for left in range(7):
+#     for right in range(left,7):
+#         print("[" + str(left)+ "|"+str(right)+']',end=" ")
+#     print()
+
+# teams=['Dragons','Wolves','Pandas','Unicorns']
+# for home_team in teams:
+#     for away_team in teams:
+#         if home_team != away_team:
+#             print(home_team + " Vs " + away_team)
+
