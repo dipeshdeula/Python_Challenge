@@ -193,14 +193,29 @@
 # print(result)
 
 #For a given number, find the sum of every digit
-def sum_of_digits(num):
-    sum=0
-    while(num>0):
-        last_digit=num%10
-        sum+=last_digit
-        num//=10
-    return sum
-user_num=int(input("Enter a number:"))
-total=sum_of_digits(user_num)
-print("The total sum of digits is:",total)
+# def sum_of_digits(num):
+#     sum=0
+#     while(num>0):
+#         last_digit=num%10
+#         sum+=last_digit
+#         num//=10
+#     return sum
+# user_num=int(input("Enter a number:"))
+# total=sum_of_digits(user_num)
+# print("The total sum of digits is:",total)
 
+#another apporach
+
+# num=input("Enter a big number:")
+# sum=0
+# for char in num:
+#     sum=sum+int(char)
+# print(sum)
+
+#another approach
+# num_str=input("Enter your number")
+# num_char=list(num_str)
+# sum=0
+# for ch in num_char:
+#     sum=sum+int(ch)
+# print(sum)
