@@ -1,5 +1,6 @@
 #open cv in python running a web cam
 #open cv helps to interact with webcamp
+#scrolling by motion object 
 
 import cv2
 import numpy as np
