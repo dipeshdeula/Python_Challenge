@@ -9,6 +9,7 @@ cap = cv2.VideoCapture(0)
 
 blue_lower=np.array([22,93,0])
 blue_upper=np.array([45,167,89])
+prev_y=0
 
 while True:
    #give display size for video
@@ -23,7 +24,10 @@ while True:
       area=cv2.contourArea(c)
       if area>300:
          x,y,w,h= cv2.boundingRect(c)
-         cv2.rectangle(frame,(x,y),(x+w,y+h),(0,22,0),2)
+         cv2.rectangle(frame,(x,y),(x+w,y+h),(0,225,0),2)
+         if y <prev_y:
+            print("Moving down")
+         prev_y=y
 
    cv2.imshow('frame',frame)
    cv2.imshow('mask',mask)
