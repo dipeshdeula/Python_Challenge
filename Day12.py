@@ -109,18 +109,112 @@
 # C=lcm(A,B)
 # print("The LCM of",A,"and",B,"is",C)
 
-import math
-a=int(input("Enter the first number:"))
-b=int(input("Enter the second number:"))
-LCM=math.lcm(a,b)
-print("The LCM of",a,"and",b,"is",LCM)
+# import math
+# a=int(input("Enter the first number:"))
+# b=int(input("Enter the second number:"))
+# LCM=math.lcm(a,b)
+# print("The LCM of",a,"and",b,"is",LCM)
 
-#calculate highest common factor
-def hcf(x,y):
-    while(y):
-        x, y = y, x % y
-    return x
-HCF=hcf(12, 8)
-print("The HCF of 12 and 8 is ", HCF)
+# #calculate highest common factor
+# def hcf(x,y):
+#     while(y):
+#         x, y = y, x % y
+#     return x
+# HCF=hcf(12, 8)
+# print("The HCF of 12 and 8 is ", HCF)
 
 
+#Guess Game problem
+# import random
+# print('To stop anytime:q')
+# score=0
+# while True:
+#     num=random.randint(1,10)
+#     guess=input("Guess a number between 1-10:")
+#     if guess=='q':
+#         print('Game over.')
+#         break
+#     guess_num=int(guess)
+#     if guess_num is num:
+#         print("CONGRATS, you guessed it correctly..!")
+#         score+=10
+#         print('Your new score:',score)
+
+#     else:
+#         print("your guess did not match:")
+#         print('The number was:',num)
+
+
+#Rock , paper , Scissor game
+# def getUserChoice(user1_choice,user2_choice): 
+#     if user1_choice == user2_choice :
+#         return "Draw"
+#     elif user1_choice() == 'p' and user2_choice()== 'r':
+#         return "user1_choice win"
+#     elif user1_choice() == 's' and user2_choice()=='p':
+#         return "user1-choice win"
+#     elif user1_choice() == 'r' and user2_choice()=='s':
+#         return "user1_choice win"
+#     elif user2_choice() == 'p' and user1_choice()=='r':
+#         return "user2_choice win"
+#     elif user2_choice() == 's' and user1_choice() =='p':
+#         return "user2_choice win"
+#     elif user2_choice() == 'r' and user2_choice()=='s':
+#         return 'user2_choice win'
+#     else:
+#         return 'Invalid input'
+    
+# user1_choice=input("\n Enter your choice (r/p/s):").lower
+# user2_choice=input("\n Enter your choice(r/p/s):").lower
+# choices=getUserChoice(user1_choice,user2_choice)
+# print(choices)
+
+
+#create a bulls and cows game
+#The cows and bulls is a number guessing game. In this game, the user guesses a number. Usually,the number will be
+# 4 digit number. However,here we will try with 2 digits number first so, if the user guesses the number correctly
+#he/she will win. if they didn't guess the exact number,then you will calculate the bulls and cows
+
+import random
+
+secret_number=str(random.randint(10,99))
+print("Welcome to Bulls And Cows Game.\n")
+print("You have to guess a secret number between 10 and 99.\n")
+
+score=0
+remaining_try = 7
+while remaining_try>0:
+    player_guess = input("Enter your guess:")
+    if player_guess == secret_number:
+        score=score+10
+        print("Yay, you guessed it!")
+        print("YOU WIN! and got a ",score,"points!!")
+        break
+    else:
+        bulls=0
+        cows=0
+
+        if player_guess[0] == secret_number[0]:
+            bulls += 1
+        if player_guess[1] == secret_number[1]:
+            bulls +=1
+        if player_guess[0] == secret_number[1]:
+            cows+=1
+        if player_guess[1] == secret_number[0]:
+            cows+=1
+        print("BULLS:",bulls)
+        print("COWS:",cows)
+        
+
+        remaining_try-=1
+       
+
+        if remaining_try<1:
+            print("You lost the game.")
+            print("The secret number is:",secret_number)
+            break
+
+
+
+
+        
