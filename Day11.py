@@ -178,24 +178,42 @@
 # print("Reverse of your String:",rev_str)
 
 #short-cut method for reverse string
-txt="WELCOME TO LEARNING ZONE"
-print(txt[::-1])
+# txt="WELCOME TO LEARNING ZONE"
+# print(txt[::-1])
 
-num="123"
-print(num[::-1])
+# num="123"
+# print(num[::-1])
 
-#reverse a number
-def rev_number(num):
-    rev=[]
-    while num>0:
-        rem=num%10
-        rev.append(rem)
-        num//=10
+# #reverse a number
+# def rev_number(num):
+#     rev=[]
+#     while num>0:
+#         rem=num%10
+#         rev.append(rem)
+#         num//=10
         
-    reverse_number=''
-    for num in rev:
-        reverse_number=reverse_number+str(num)
-    return reverse_number
-usr_num=int(input("Enter Your Number: "))
-reverse_number=rev_number(usr_num)
-print("The reverse number is:",reverse_number)
+#     reverse_number=''
+#     for num in rev:
+#         reverse_number=reverse_number+str(num)
+#     return reverse_number
+# usr_num=int(input("Enter Your Number: "))
+# reverse_number=rev_number(usr_num)
+# print("The reverse number is:",reverse_number)
+
+#another method
+def reverse_num(num):
+    reverse=0
+    while(num>0):
+        last_digit=num%10
+        reverse=(reverse*10)+last_digit
+        num//=10
+    return reverse
+
+number=int(input("Enter the number:"))
+reverse=reverse_num(number)
+print("The Reversed Number is: ",reverse)
+
+#reverse word
+name="Dipesh"
+reverserd_word = name[::-1]
+print(reverserd_word)
