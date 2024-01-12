@@ -48,7 +48,7 @@
 # else:
 #     print("The Given Number Is Not An Amstrong Number")
 
-#calculate the greatest commong divisor (gcd) of two numbers
+#calculate the greatest common divisor (gcd) of two numbers
 #In mathematics, the greatest common divisor (gcd) of two or more integer is the largest positive integer
 #that divides each of the integers
 
