@@ -175,44 +175,44 @@
 # 4 digit number. However,here we will try with 2 digits number first so, if the user guesses the number correctly
 #he/she will win. if they didn't guess the exact number,then you will calculate the bulls and cows
 
-import random
+# import random
 
-secret_number=str(random.randint(10,99))
-print("Welcome to Bulls And Cows Game.\n")
-print("You have to guess a secret number between 10 and 99.\n")
+# secret_number=str(random.randint(10,99))
+# print("Welcome to Bulls And Cows Game.\n")
+# print("You have to guess a secret number between 10 and 99.\n")
 
-score=0
-remaining_try = 7
-while remaining_try>0:
-    player_guess = input("Enter your guess:")
-    if player_guess == secret_number:
-        score=score+10
-        print("Yay, you guessed it!")
-        print("YOU WIN! and got a ",score,"points!!")
-        break
-    else:
-        bulls=0
-        cows=0
+# score=0
+# remaining_try = 7
+# while remaining_try>0:
+#     player_guess = input("Enter your guess:")
+#     if player_guess == secret_number:
+#         score=score+10
+#         print("Yay, you guessed it!")
+#         print("YOU WIN! and got a ",score,"points!!")
+#         break
+#     else:
+#         bulls=0
+#         cows=0
 
-        if player_guess[0] == secret_number[0]:
-            bulls += 1
-        if player_guess[1] == secret_number[1]:
-            bulls +=1
-        if player_guess[0] == secret_number[1]:
-            cows+=1
-        if player_guess[1] == secret_number[0]:
-            cows+=1
-        print("BULLS:",bulls)
-        print("COWS:",cows)
+#         if player_guess[0] == secret_number[0]:
+#             bulls += 1
+#         if player_guess[1] == secret_number[1]:
+#             bulls +=1
+#         if player_guess[0] == secret_number[1]:
+#             cows+=1
+#         if player_guess[1] == secret_number[0]:
+#             cows+=1
+#         print("BULLS:",bulls)
+#         print("COWS:",cows)
         
 
-        remaining_try-=1
+#         remaining_try-=1
        
 
-        if remaining_try<1:
-            print("You lost the game.")
-            print("The secret number is:",secret_number)
-            break
+#         if remaining_try<1:
+#             print("You lost the game.")
+#             print("The secret number is:",secret_number)
+#             break
 
 
 
